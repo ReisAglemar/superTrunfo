@@ -71,22 +71,23 @@ public class DeskCards {
     @Override
     public String toString() {
         String formatOut = """
-                                   
-                        \t==== %s ====
-                                  
-                        \t 1- Horse Power: %d HP
+                           
+                        \t ====== %s ======
+                                
+                        \t   1- Horse Power:    %d HP
                                     
-                        \t 2- Torque: %.1f Kgf/m²
+                        \t   2- Torque:         %.1f Kgf/m²
                                     
-                        \t 3- Cilynder Capacity: %d cc
+                        \t   3- Engine Sixe:    %d cc
                                     
-                        \t 4- Aceleration 0 a 100: %.1f s
+                        \t   4- Acel. 0 a 100:  %.1f s
                                     
-                        \t 5- Max Speed: %d Km/h
+                        \t   5- Max Speed:      %d Km/h
+                           
+                        \t+--------------------------------+  
                         """.formatted(getMarkNameEngine(), getHorsepower(),
                 getTorque(), getCilynderCapacity(), getAcceleration0a100(), getMaxSpeed());
-
+                
         return formatOut;
     }
-
 }
