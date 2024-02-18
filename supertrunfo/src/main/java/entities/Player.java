@@ -1,17 +1,18 @@
 package entities;
 
+import java.util.Scanner;
+
 /**
  *
  * @author reis
  */
-public class Player implements ActionsInterface{
-    
+public class Player {
+
     private String nane;
     int id;
+    private DeskCards cards;
 
-    public Player(String nane, int id) {
-        this.nane = nane;
-        this.id = id;
+    public Player() {
     }
 
     public String getNane() {
@@ -22,43 +23,33 @@ public class Player implements ActionsInterface{
         this.nane = nane;
     }
 
-    public int getId() {
-        return id;
+    public String getId() {
+        return "Jogador -" + id;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    @Override
-    public void chooseAttributeCard(DeskCards cards) {
+    public DeskCards getCards() {
+        return cards;
     }
 
-    @Override
-    public void earnCard(DeskCards cards) {
+    public void setCards(DeskCards cards) {
+        this.cards = cards;
     }
 
-    @Override
-    public void loseCard(DeskCards cards) {
+    public void newPlayer(Scanner inputScanner, int humanOrMachine) {
+        
+        if (humanOrMachine == 1 ){
+        System.out.println("");
+        System.out.println("    Para jogar insira seu nome abaixo. ");
+        System.out.println("");
+        setNane(inputScanner.nextLine());
+        setId(humanOrMachine);
+        } else {
+            setNane("Thinkpad T14 Opresor");
+            setId(humanOrMachine);
+        }
     }
-
-    @Override
-    public void celebrateVictory() {
-    }
-
-    @Override
-    public void regretDefeat() {
-    }
-
-    @Override
-    public void howManyCards() {
-    }
-
-    @Override
-    public void defineWinner() {
-    }
-    
-    
-    
-    
 }
