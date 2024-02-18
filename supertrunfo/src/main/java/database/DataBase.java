@@ -7,11 +7,11 @@ package database;
  */
 public class DataBase {
 
-    private final String[] markNameEngine = {"Lamborghini Huracan V10", "Lamborghini Revuelto V12",
-        "Lamborghini Urus V8", "Lamborghini Centenario V12", "Pagani Zonda F V12",
-        "Pagani Huayra V12", "Saleen S7 V8", "Hennessey Venom V8",
-        "Chevrolet Camaro V8", "Dodge Charger V8", "Dodge Challenger V8",
-        "Dodge Viper V10", "Chevrolet Corvette V8", "Ford Mustang V8"};
+    private final String[] markNameEngine = {"Lamborghini Huracan V10 (1)", "Lamborghini Revuelto V12 (2)",
+        "Lamborghini Urus V8 (3)", "Lamborghini Centenario V12 (4)", "Pagani Zonda F V12 (5)",
+        "Pagani Huayra V12 (6)", "Saleen S7 V8 (7)", "Hennessey Venom V8 (8)",
+        "Chevrolet Camaro V8 (9)", "Dodge Charger V8 (10)", "Dodge Challenger V8 (11)",
+        "Dodge Viper V10 (12)", "Chevrolet Corvette V8 (13)", "Ford Mustang V8 (14)"};
 
     private final int[] horsePower = {610, 825, 666, 770, 602, 764, 760, 1842, 461, 717,
         717, 654, 502, 483};
