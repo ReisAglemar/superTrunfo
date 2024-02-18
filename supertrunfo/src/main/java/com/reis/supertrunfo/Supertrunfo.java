@@ -29,12 +29,20 @@ public class Supertrunfo {
                     transferDataBase.getCilynderCapacity()[i], transferDataBase.getMaxSpeed()[i],
                     transferDataBase.getTorque()[i], transferDataBase.getAceleration0a100()[i]);
         }
+        
+        /**
+        for (DeskCards deskCards : card) {
+            System.out.println(deskCards.toString());
+        }
+        */
         // shuffle card
         toPlay.shuffle(card);
 
         // half card
         DeskCards[] firstHalf = Arrays.copyOfRange(card, ZER0, HALF_NUMBER_OBJECTS);
         DeskCards[] secondHalf = Arrays.copyOfRange(card, HALF_NUMBER_OBJECTS, NUNBER_OBJECTS);
+        
+       
 
         //welcome
         System.out.println("""
