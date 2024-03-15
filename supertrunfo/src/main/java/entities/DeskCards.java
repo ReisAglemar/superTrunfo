@@ -78,7 +78,7 @@ public class DeskCards {
                                     
                         \t   2- Torque:         %.1f Kgf/m²
                                     
-                        \t   3- Engine Sixe:    %d cc
+                        \t   3- Engine Size:    %d cc
                                     
                         \t   4- Acel. 0 a 100:  %.1f s
                                     

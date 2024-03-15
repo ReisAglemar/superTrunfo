@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Player {
 
     private String nane;
-    int id;
+    private int id;
     private DeskCards cards;
 
     public Player() {
