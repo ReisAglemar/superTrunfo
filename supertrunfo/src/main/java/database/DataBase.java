@@ -29,33 +29,33 @@ public class DataBase {
         4.2f, 3.7f, 4.0f, 3.5f, 3.0f, 4.3f};
 
     private final String[] phrasesWinner = {"Os cálculos precisos do algoritmo superaram a intuição humana novamente",
-        "A lógica do código se destaca, mais uma vitória computacional.",
+        "A lógica do código se destaca, mais uma vitória computacional",
         "Os bits e bytes formam uma combinação invencível",
-        "A vitória se alinha com os algoritmos, deixando o jogador humano perplexo.",
+        "A vitória se alinha com os algoritmos, deixando o jogador humano perplexo",
         "A máquina revela sua carta e vence com superioridade algorítmica",
-        "A mente biológica é superada na escolha do atributo.",
+        "A mente biológica é superada na escolha do atributo",
         "A era digital escreve mais uma página de triunfo, com a máquina à frente",
-        "Os algoritmos decifram a estratégia humana e celebram a vitória.",
+        "Os algoritmos decifram a estratégia humana e celebram a vitória",
         "No jogo de cartas binário, a máquina mostra sua supremacia",
-        "A mente analógica tenta, mas os circuitos prevalecem mais uma vez.",
+        "A mente analógica tenta, mas os circuitos prevalecem mais uma vez",
         "A carta algorítmica desvenda a estratégia humana, conquistando a rodada",
-        "A vitória digital é incontestável no duelo de atributos.",
+        "A vitória digital é incontestável no duelo de atributos",
         "O código-fonte escolhe sabiamente, assegurando a vitória computacional",
-        "Mais uma vez, a máquina comanda o jogo com suas decisões precisas.",
+        "Mais uma vez, a máquina comanda o jogo com suas decisões precisas",
         "Nas cartas digitais, a IA demonstra sua maestria, conquistando a mesa",
-        "O jogador humano assiste à superioridade dos algoritmos.",
+        "O jogador humano assiste à superioridade dos algoritmos",
         "A vitória se traduz em sequências de 0s e 1s, onde o algoritmo prevalece",
-        "A estratégia humana se desfaz diante do poder da inteligência artificial.",
+        "A estratégia humana se desfaz diante do poder da inteligência artificial",
         "No jogo de atributos, os transistores revelam sua força, garantindo a vitória",
-        "A mente orgânica é superada na escolha do melhor atributo.",
+        "A mente orgânica é superada na escolha do melhor atributo",
         "Os elétrons dançam em celebração à vitória algorítmica",
-        "A máquina mais uma vez domina o jogo de cartas digitais.",
+        "A máquina mais uma vez domina o jogo de cartas digitais",
         "A escolha algorítmica se mostra imparável, garantindo a conquista",
-        "Os algoritmos digitais têm mais uma vitória em seu registro.",
+        "Os algoritmos digitais têm mais uma vitória em seu registro",
         "No duelo de estratégias, a inteligência artificial se destaca mais uma vez",
-        "A mente humana é desafiada pela precisão dos algoritmos.",
+        "A mente humana é desafiada pela precisão dos algoritmos",
         "A carta binária revela-se invencível, assegurando a vitória digital",
-        "Os zeros e uns comemoram mais um triunfo sobre a cognição humana.",
+        "Os zeros e uns comemoram mais um triunfo sobre a cognição humana",
         "A sequência de bits revela seu poder, conquistando a mesa com maestria",
         "Na batalha de algoritmos, a vitória digital é proclamada com elegância",
         "Os códigos celebram em uníssono, enquanto a máquina triunfa novamente",
@@ -72,7 +72,7 @@ public class DataBase {
         "Os algoritmos desvendam a estratégia rival, conquistando a vitória com maestria",
         "A carta binária revela seu valor, eclipsando as escolhas humanas no jogo",
         "A inteligência artificial exibe seu domínio, marcando mais uma vitória estratégica",
-        "Os algoritmos declaram triunfo, enquanto as cartas digitais registram mais uma conquista."};
+        "Os algoritmos declaram triunfo, enquanto as cartas digitais registram mais uma conquista"};
 
     private final String[] phrasesDefeat = {"Os cálculos do algoritmo se desviaram, lamentando a derrota frente à estratégia humana",
         "A lógica do código falhou, resultando em uma derrota computacional desta vez",
@@ -105,7 +105,7 @@ public class DataBase {
         "Os algoritmos falham na estratégia, e a máquina lamenta a derrota com respeito",
         "A carta binária não revela seu valor, e a máquina enfrenta a derrota com dignidade",
         "A inteligência artificial não exibe seu domínio desta vez, marcando uma derrota estratégica",
-        "Os algoritmos declaram a derrota, enquanto as cartas digitais registram a perda da máquina."};
+        "Os algoritmos declaram a derrota, enquanto as cartas digitais registram a perda da máquina"};
 
     public String[] getMarkNameEngine() {
         return markNameEngine;

@@ -3,6 +3,7 @@ package entities;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 /**
  *
@@ -11,23 +12,73 @@ import java.util.List;
 public class Toplay implements ActionsInterface {
 
     @Override
-    public void chooseAttributeCard(DeskCards cards) {
+    public int chooseAttributeCard(int bounds) {
+        Random numberRandom = new Random();
+        int atribute = numberRandom.nextInt(bounds) + 1;
+        //int atribute = 1;
+        return atribute;
     }
 
     @Override
-    public void earnCard(DeskCards cards) {
+    public DeskCards[] earnCard(DeskCards[] deskCardsWinner, DeskCards[] deskCardsLosser) {
+
+        DeskCards[] deskCardsSwap = new DeskCards[deskCardsWinner.length + 1];
+
+        for (int i = 0; i < deskCardsWinner.length; i++) {
+            deskCardsSwap[i] = deskCardsWinner[i];
+        }
+
+        deskCardsSwap[deskCardsSwap.length - 1] = deskCardsLosser[0];
+
+        return deskCardsSwap;
     }
 
     @Override
-    public void loseCard(DeskCards cards) {
+    public DeskCards[] changeDeck(DeskCards[] deskCardsWinner) {
+
+        DeskCards[] deskCardsSwap = new DeskCards[deskCardsWinner.length];
+
+        for (int i = 0; i < deskCardsWinner.length; i++) {
+
+            if (i != deskCardsWinner.length - 1) {
+                deskCardsSwap[i] = deskCardsWinner[i + 1];
+            } else {
+                deskCardsSwap[i] = deskCardsWinner[0];
+            }
+        }
+
+        return deskCardsSwap;
     }
 
     @Override
-    public void celebrateVictory() {
+    public DeskCards[] loseCard(DeskCards[] deskCardsLosser) {
+
+        DeskCards[] deskCardsSwap = new DeskCards[deskCardsLosser.length - 1];
+
+        for (int i = 0; i < deskCardsSwap.length; i++) {
+            deskCardsSwap[i] = deskCardsLosser[i + 1];
+        }
+
+        return deskCardsSwap;
     }
 
     @Override
-    public void regretDefeat() {
+    public String celebrateVictory(String[] phrasesWinner, int prases) {
+
+        Random numberRandom = new Random();
+
+        String message = phrasesWinner[numberRandom.nextInt(prases)];
+
+        return message;
+    }
+
+    @Override
+    public String regretDefeat(String[] phrasesDefeat, int prases) {
+        Random numberRandom = new Random();
+
+        String message = phrasesDefeat[numberRandom.nextInt(prases)];
+
+        return message;
     }
 
     @Override
@@ -63,46 +114,61 @@ public class Toplay implements ActionsInterface {
     }
 
     @Override
-    public void defineWinner(DeskCards[] deskCardsHuman, DeskCards[] deskCardsMachine, int atribute, int indice) {
+    public int defineWinner(DeskCards[] deskCardsHuman, DeskCards[] deskCardsMachine, int atribute, int indice) {
+
+        int defineWiner = 0;
+        
+        // 0 = machine winnwer
+        // 1 = humana winnwer
 
         switch (atribute) {
-            case 1:
-                if ((deskCardsHuman[indice].getHorsepower()) > deskCardsMachine[indice].getHorsepower()) {
-                    System.out.println("Você ganhou, a máquina tinha " + deskCardsMachine[indice].getHorsepower() + " HP");
-                    System.out.println("");
-                    System.out.println(deskCardsHuman.length);
-                    deskCardsHuman[deskCardsHuman.length -1] = deskCardsMachine[indice];
-//                    deskCardsHuman[deskCardsHuman.length - 1] = deskCardsHuman[indice];
-                    System.out.println(deskCardsHuman.length);
+            case 1: // HP
+                if ((deskCardsHuman[indice].getHorsepower()) > deskCardsMachine[indice].getHorsepower() /*true*/) {
+                    defineWiner = 1;
 
                 } else {
-                    System.out.println("Você perdeu, a máquina tinha " + deskCardsMachine[indice].getHorsepower() + " HP");
-                    System.out.println("");
-                    System.out.println(deskCardsMachine.length);
-                    deskCardsMachine[deskCardsMachine.length - 1] = deskCardsHuman[indice];
-//                    deskCardsMachine[deskCardsMachine.length - 1] = deskCardsMachine[indice];
-                    System.out.println(deskCardsHuman.length);
-
+                    defineWiner = 0;
                 }
                 break;
 
-            case 2:
-                System.out.println(deskCardsHuman[indice].getTorque());
+            case 2: // TORQUE
+                if ((deskCardsHuman[indice].getTorque()) > deskCardsMachine[indice].getTorque()/*true*/) {
+                    defineWiner = 1;
+
+                } else {
+                    defineWiner = 0;
+                }
                 break;
 
-            case 3:
-                System.out.println(deskCardsHuman[indice].getCilynderCapacity());
+            case 3: // ENGINE SIZE
+                if ((deskCardsHuman[indice].getCilynderCapacity()) > deskCardsMachine[indice].getCilynderCapacity()/*true*/) {
+                    defineWiner = 1;
+
+                } else {
+                    defineWiner = 0;
+                }
                 break;
 
-            case 4:
-                System.out.println(deskCardsHuman[indice].getAcceleration0a100());
+            case 4: // ACELL 0 A 100
+                if ((deskCardsHuman[indice].getAcceleration0a100()) < deskCardsMachine[indice].getAcceleration0a100()/*true*/) {
+                    defineWiner = 1;
+
+                } else {
+                    defineWiner = 0;
+                }
                 break;
 
-            case 5:
-                System.out.println(deskCardsHuman[indice].getMaxSpeed());
+            case 5: // MAX SPEED
+                if ((deskCardsHuman[indice].getMaxSpeed()) > deskCardsMachine[indice].getMaxSpeed()/*true*/) {
+                    defineWiner = 1;
+
+                } else {
+                    defineWiner = 0;
+                }
                 break;
             default:
         }
+        return defineWiner;
     }
 
 }

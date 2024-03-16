@@ -6,21 +6,23 @@ package entities;
  */
 public interface ActionsInterface {
 
-    public abstract void chooseAttributeCard(DeskCards cards);
+    public abstract int chooseAttributeCard(int bounds); // ok
 
-    public abstract void earnCard(DeskCards cards);
+    public DeskCards[] earnCard(DeskCards[] deskCardsWinner, DeskCards[] deskCardsLosser); // ok
 
-    public abstract void loseCard(DeskCards cards);
+    public DeskCards[] changeDeck(DeskCards[] deskCardsWinner); // ok
 
-    public DeskCards[] shuffle(DeskCards[] cards); //ok
+    public DeskCards[] loseCard(DeskCards[] deskCardsLosser); // ok
 
-    public DeskCards[] halfDeskCards(DeskCards[] cards, int NUNBER_OBJECTS, int id); //ok
+    public DeskCards[] shuffle(DeskCards[] cards); // ok
 
-    public abstract String howManyCards(DeskCards[] cards); //ok
+    public DeskCards[] halfDeskCards(DeskCards[] cards, int NUNBER_OBJECTS, int id); // ok
 
-    public abstract void celebrateVictory();
+    public abstract String howManyCards(DeskCards[] cards); // ok
 
-    public abstract void regretDefeat();
+    public abstract String celebrateVictory( String[] phrasesWinner, int phrases); // ok
 
-    public abstract void defineWinner(DeskCards[] deskCardsHuman, DeskCards[] deskCardsMachine, int atribute, int indice);
+    public abstract String regretDefeat(String[] phrasesDefeat, int phrases); // ok
+
+    public abstract int defineWinner(DeskCards[] deskCardsHuman, DeskCards[] deskCardsMachine, int atribute, int indice); // ok
 }
