@@ -99,6 +99,7 @@ public class Supertrunfo {
                     System.out.println("");
                     System.out.println("Você escolheu SAIR");
                     playing = 0;
+                    results(deskCardsHuman, deskCardsMachine);
                     break;
 
                 case 1: // HP
@@ -116,7 +117,6 @@ public class Supertrunfo {
                         option = 1137;
                         clearConsole();
                         System.out.println("======================= NOVA RODADA ==============================");
-                        
 
                         // 0 == machine winner
                     } else {
@@ -139,7 +139,7 @@ public class Supertrunfo {
 
                     // 1 == human winner 
                     if (toPlay.defineWinner(deskCardsHuman, deskCardsMachine, 2, ZERO) == 1) {
-                        System.out.println("    VOCÊ GANHOU essa rodada. A máquina tinha " + deskCardsMachine[ZERO].getTorque()+ " TORQUE");
+                        System.out.println("    VOCÊ GANHOU essa rodada. A máquina tinha " + deskCardsMachine[ZERO].getTorque() + " TORQUE");
                         System.out.println("");
                         deskCardsHuman = toPlay.changeDeck(deskCardsHuman);
                         deskCardsHuman = toPlay.earnCard(deskCardsHuman, deskCardsMachine);
@@ -148,11 +148,10 @@ public class Supertrunfo {
                         option = 1137;
                         clearConsole();
                         System.out.println("======================= NOVA RODADA ==============================");
-                        
 
                         // 0 == machine winner
                     } else {
-                        System.out.println("    MÁQUINA GANHOU essa rodade ela tinha " + deskCardsMachine[ZERO].getTorque()+ " TORQUE");
+                        System.out.println("    MÁQUINA GANHOU essa rodade ela tinha " + deskCardsMachine[ZERO].getTorque() + " TORQUE");
                         System.out.println("");
                         deskCardsMachine = toPlay.changeDeck(deskCardsMachine);
                         deskCardsMachine = toPlay.earnCard(deskCardsMachine, deskCardsHuman);
@@ -171,7 +170,7 @@ public class Supertrunfo {
 
                     // 1 == human winner 
                     if (toPlay.defineWinner(deskCardsHuman, deskCardsMachine, 3, ZERO) == 1) {
-                        System.out.println("    VOCÊ GANHOU essa rodada. A máquina tinha " + deskCardsMachine[ZERO].getCilynderCapacity()+ " CILINDRADAS");
+                        System.out.println("    VOCÊ GANHOU essa rodada. A máquina tinha " + deskCardsMachine[ZERO].getCilynderCapacity() + " CILINDRADAS");
                         System.out.println("");
                         deskCardsHuman = toPlay.changeDeck(deskCardsHuman);
                         deskCardsHuman = toPlay.earnCard(deskCardsHuman, deskCardsMachine);
@@ -180,11 +179,10 @@ public class Supertrunfo {
                         option = 1137;
                         clearConsole();
                         System.out.println("======================= NOVA RODADA ==============================");
-                        
 
                         // 0 == machine winner
                     } else {
-                        System.out.println("    MÁQUINA GANHOU essa rodade ela tinha " + deskCardsMachine[ZERO].getCilynderCapacity()+ " CILINDRADAS");
+                        System.out.println("    MÁQUINA GANHOU essa rodade ela tinha " + deskCardsMachine[ZERO].getCilynderCapacity() + " CILINDRADAS");
                         System.out.println("");
                         deskCardsMachine = toPlay.changeDeck(deskCardsMachine);
                         deskCardsMachine = toPlay.earnCard(deskCardsMachine, deskCardsHuman);
@@ -203,7 +201,7 @@ public class Supertrunfo {
 
                     // 1 == human winner 
                     if (toPlay.defineWinner(deskCardsHuman, deskCardsMachine, 4, ZERO) == 1) {
-                        System.out.println("    VOCÊ GANHOU essa rodada. A máquina tinha " + deskCardsMachine[ZERO].getAcceleration0a100()+ " ACELERAÇÃO");
+                        System.out.println("    VOCÊ GANHOU essa rodada. A máquina tinha " + deskCardsMachine[ZERO].getAcceleration0a100() + " ACELERAÇÃO");
                         System.out.println("");
                         deskCardsHuman = toPlay.changeDeck(deskCardsHuman);
                         deskCardsHuman = toPlay.earnCard(deskCardsHuman, deskCardsMachine);
@@ -212,11 +210,10 @@ public class Supertrunfo {
                         option = 1137;
                         clearConsole();
                         System.out.println("======================= NOVA RODADA ==============================");
-                        
 
                         // 0 == machine winner
                     } else {
-                        System.out.println("    MÁQUINA GANHOU essa rodade ela tinha " + deskCardsMachine[ZERO].getAcceleration0a100()+ " ACELERAÇÃO");
+                        System.out.println("    MÁQUINA GANHOU essa rodade ela tinha " + deskCardsMachine[ZERO].getAcceleration0a100() + " ACELERAÇÃO");
                         System.out.println("");
                         deskCardsMachine = toPlay.changeDeck(deskCardsMachine);
                         deskCardsMachine = toPlay.earnCard(deskCardsMachine, deskCardsHuman);
@@ -235,7 +232,7 @@ public class Supertrunfo {
 
                     // 1 == human winner 
                     if (toPlay.defineWinner(deskCardsHuman, deskCardsMachine, 5, ZERO) == 1) {
-                        System.out.println("    VOCÊ GANHOU essa rodada. A máquina tinha " + deskCardsMachine[ZERO].getMaxSpeed()+ " VELOCIDADE MÁXIMA");
+                        System.out.println("    VOCÊ GANHOU essa rodada. A máquina tinha " + deskCardsMachine[ZERO].getMaxSpeed() + " VELOCIDADE MÁXIMA");
                         System.out.println("");
                         deskCardsHuman = toPlay.changeDeck(deskCardsHuman);
                         deskCardsHuman = toPlay.earnCard(deskCardsHuman, deskCardsMachine);
@@ -244,11 +241,10 @@ public class Supertrunfo {
                         option = 1137;
                         clearConsole();
                         System.out.println("======================= NOVA RODADA ==============================");
-                        
 
                         // 0 == machine winner
                     } else {
-                        System.out.println("    MÁQUINA GANHOU essa rodade ela tinha " + deskCardsMachine[ZERO].getMaxSpeed()+ " VELOCIDADE MAXIMA");
+                        System.out.println("    MÁQUINA GANHOU essa rodade ela tinha " + deskCardsMachine[ZERO].getMaxSpeed() + " VELOCIDADE MAXIMA");
                         System.out.println("");
                         deskCardsMachine = toPlay.changeDeck(deskCardsMachine);
                         deskCardsMachine = toPlay.earnCard(deskCardsMachine, deskCardsHuman);
@@ -280,7 +276,26 @@ public class Supertrunfo {
                     option = 1137;
             }
         } while (playing != 0);
+    }
 
+    public static void results(DeskCards[] deskCardsHuman, DeskCards[] deskCardsMachine) {
+        
+        System.out.println("");
+        System.out.println("""
+                                             _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+                                    >>>>>>>>|                               |>>>>>>>>
+                                    >>>>>>>>|   RESULTADO DO SUPER TRUNFO   |>>>>>>>>
+                                    >>>>>>>>|_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|>>>>>>>>
+                           """);
+        System.out.println("\n");
+
+        if (deskCardsHuman.length == deskCardsMachine.length) {
+            System.out.println("    Você e máquina terminaram empatados\n\n\n");
+        } else if (deskCardsHuman.length > deskCardsMachine.length) {
+            System.out.println("    Parabéns, você ganhou da máquina\n\n");
+        } else {
+            System.out.println("    Que pena! A máquina ganhou...\n\n\n");
+        }     
     }
 
     public static String welcome(Player playerHuman, int numberObjects) {
